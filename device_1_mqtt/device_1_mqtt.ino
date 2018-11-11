@@ -1,10 +1,3 @@
-// Lora Radio Setup
-#include <RH_RF95.h>
-#include <avr/interrupt.h> //watchdog timer
-#include <avr/wdt.h>
-#include <EEPROM.h>
-
-
 #include <Arduino.h>
 #include <CloudIoTCore.h>
 #include <CloudIoTCoreMQTTClient.h>
@@ -13,12 +6,6 @@
 // Software serial
 #include <SoftwareSerial.h>
 SoftwareSerial SerialAT(13, 12); // RX, TX
-
-#define FREQUENCY  434
-#define LED        15 // Moteino MEGAs have LEDs on D15
-#define FLASH_SS   23 // and FLASH SS on D23
-// Singleton instance of the radio driver
-RH_RF95 rf95;
 
 // GSM configuration
 #define TINY_GSM_MODEM_SIM800
